@@ -105,12 +105,6 @@
     transform: scale(1.2);
 }
 
-.overlay p {
-    color: rgb(204, 203, 195);
-    font-size: 20px;
-    cursor:default;
-    transition: transform 0.6s ease;
-}
 
 
         @keyframes slide {
@@ -138,108 +132,113 @@ body::before {
 
 .info-box {
     width: 80%;
-    margin: 0px auto;
-   background-color: rgba(212, 206, 206, 0.9);
+    margin: 0 auto;
+    background-color: rgba(212, 206, 206, 0.9);
     display: flex;
     padding: 30px;
     border-radius: 12px;
     gap: 30px;
-    transition: transform 0.3s ease;
+
+    transition: all 0.35s ease;
 }
+
+.info-box:hover {
+    background-color: rgba(242, 245, 245, 0.95);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: scale(1.03);
+}
+
+
 
 .info-text {
     width: 50%;
-    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: transparent;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
+
+
+
 
 .info-text h2 {
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: rgb(42, 29, 70);
-    transition: transform 0.2s ease;
+
+    transition: transform 0.3s ease;
 }
+
+.info-text:hover h2 {
+    transform: translateX(6px);
+}
+
 
 .info-text p {
     font-size: 16px;
-    margin-bottom: 12px;
     color: #555;
     line-height: 1.6;
-    transition: transform 0.6s ease;
+
+    transition: transform 0.4s ease;
 }
+
+.info-text:hover p {
+    transform: translateX(4px);
+}
+
+
 
 .info-image {
     width: 50%;
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .info-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.6s ease;
+
+    transition: transform 0.5s ease;
 }
 
-.btn {
-   margin: 25px;
-   padding: 10px;
-   border-radius: 7px;
-   cursor: pointer;
+.info-image:hover img {
+    transform: scale(1.05);
 }
 
-.info-box:hover{
-   background-color: rgba(242, 245, 245, 0.92);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    transform: scale(1.03);
-    transition-timing-function: ease-in;
-    transition: transform 0.6s ease;
-}
-
-.info-text:hover {
-    background-color: rgb(232, 223, 223);
-    padding: 20px;
-    transition: transform 1s ease;
-}
-
-.info-text a .btn:hover {
-    background: #71726e;
-    color: aliceblue;
-    transition: transform 0.6s ease;
+.btn,
+.btn1 {
+    margin-top: 20px;
+    padding:15px;
+    border-radius: 7px;
     cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
 }
-.info-image:hover{
-     transform: scale(1.02);
+
+.info-text a .btn:hover,
+.info-text a .btn1:hover {
+    background: gray;
+    color: rgb(239, 242, 244);
+    transform: translateY(-2px);
 }
+
 
 .info-images {
     display: flex;
     height: 300px;
-    gap:30px;
-    transition: transform 0.6s ease;
-}
-.info-text {
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.6s ease;
+    gap: 30px;
 }
 
-.btn1{
-   margin: 25px;
-   padding: 12px;
-   border-radius: 7px;
-   margin-top: -0px;
-   font-weight: 20px;
-   cursor: pointer;
-   
-}
-
-.info-text a .btn1:hover {
-    background: #71726e;
-    color: aliceblue;
-    cursor: pointer;
 
 
-}
+
+
+
+
 
 
 body {
